@@ -26,4 +26,4 @@ https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/AnatomicalROI/FreeSurferCol
 
 Where the colors are representing the statistic of interest (average MS or case-control t-statistics for MS). Can be adapted to work with any statistics as long as they are in the Glasser parcellation. 
 
-Note that a different order of the HCP 360 labels (Glasser et al 2016) was used: HOA_VOL_SURF_GLASSER_labels.xlsx provides a mapping of these ids; also to Harvard-Oxford atlas regions.
+Note that a different order of the HCP 360 labels (Glasser et al 2016) was used in the analyses from the order of the regions in e.g. freesurfer aparc stats: HOA_VOL_SURF_GLASSER_labels.xlsx provides a mapping of these ids. It also includes a coarse mapping to Harvard-Oxford atlas regions based on manual annotation.
