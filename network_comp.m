@@ -9,7 +9,7 @@ label_names_all=vertcat(llabel_names, rlabel_names) %combine all labels
 
 %% Global MS comparisons
 %%% HC vs SDI
-mean_MS=mean(MS')'; y=mean_MS(group<=2 | (group==4 & age<45 & age>20))
+mean_MS=mean(MS_nodemean')'; y=mean_MS(group<=2 | (group==4 & age<45 & age>20)) %%% group 1=HC, group2=SDI, group 4=ROCKLAND
 X=horzcat(group(group<=2 | (group==4 & age<45 & age>20)), sex(group<=2| (group==4 & age<45 & age>20)), age(group<=2| (group==4 & age<45 & age>20))); 
 mdl = fitglm(X,y,'linear')
 %%% HC vs SDI
