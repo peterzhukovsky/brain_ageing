@@ -39,8 +39,7 @@ end
 
 
 
-full_cell=full_cell'
-
+full_cell=full_cell' %%% full cell can be used as a freesurfer colortable along with the labels to generate an aparc file with each of the labels having the color corresponding to the respective statistic
 
 formatSpec = '%d  %s   %d  %d   %d   %d\n';
 fprintf(formatSpec,full_cell{:})
