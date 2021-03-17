@@ -5,10 +5,10 @@ A set of scripts used to analyse brain ageing using morphometric similarity netw
 A script that constructs MSN from freesurfer-derived label statistics. The script outputs mean regional MS and also the full 360x360 matrix of pairwise similarity values.
 
 # network_comp.m
-A script that compares groups using independent samples t-tests with FDR and also uses permutation testing as alternative to multiple comparison correction. PFDR<0.01
+A script that compares groups using independent samples t-tests with FDR and also uses permutation testing as alternative to multiple comparison correction. PFDR<0.01 Briefly, 60 regions were significant at Pperm<0.01 and 43 regions were significant at Pfdr<0.01, suggesting that FDR correction at the 0.01 level is more stringent. 
 
 # dev_trajectories.m
-A script constructing developmental "trajectories" from cross-sectional NKI-RS data. It uses these quadratic models to create residuals for "hold-out" data for individuals with stimulant use disorder (cases) and healthy controls. These residuals are then used to test for singificant deviation in cases and controls from the "normative" NKI-RS data. While the model provides good fit for controls, cases show significant deviations (PFDR<0.01); for many regions, the direction of the deviation is the same as the direction of the trajectory. These MS deviations are interpreted as suggesting accelerated ageing of those brain regions. 
+A script constructing developmental "trajectories" from cross-sectional NKI-RS data. It uses these quadratic models to create residuals for "hold-out" data for individuals with stimulant use disorder (cases) and healthy controls. These residuals are then used to test for singificant deviation in cases and controls from the "normative" NKI-RS data. While the model provides good fit for controls, cases show significant deviations (PFDR<0.01); for many regions, the direction of the deviation is the same as the direction of the trajectory. Such MS deviations are interpreted as suggesting accelerated ageing of those brain regions. 
 
 # network_PAL.m
 Partial least squares analysis linking regional MS to paired associates learning (PAL) and age using *plsregress* and permutation testing following **Morgan et al 2019 (PNAS)**; see also  
