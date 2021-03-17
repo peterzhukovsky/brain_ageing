@@ -58,8 +58,8 @@ end
 figure; scatter(mean(MS(group==1, :)), mean(MS(group==2 & age<60 & age>20, :)), 6, 'filled')
 corr(horzcat(tstat_roi, tstat_roi1'))
 
-FDR_hc_ixi = mafdr(pstat_roi(1:360))
-label_names_all(FDR_hc_ixi<0.001)
+FDR_hc_rock = mafdr(pstat_roi(1:360))
+label_names_all(FDR_hc_rock<0.001)
 
 
 %%% SDI VS ROCK
@@ -69,16 +69,16 @@ for roi=1:360
     tstat_roi(roi)=stats.tstat;
     pstat_roi(roi)=p;
 end
-FDR_sdi_ixi = mafdr(pstat_roi(1:360))
-label_names_all(FDR_sdi_ixi<0.001) %& FDR<0.01)
+FDR_sdi_rock = mafdr(pstat_roi(1:360))
+label_names_all(FDR_sdi_rock<0.001) %& FDR<0.01)
 corr(tstat_roi, tstat_roi1')
 scatter(tstat_roi', tstat_roi1', 8, 'k', 'filled'); %x=tstat_roi'; X=horzcat(ones(1,360)', x); y=tstat_roi1'; b=x/y
 
-label_names_all((FDR_hc_sdi<0.01) & (FDR_hc_ixi<0.001) & ~(FDR_sdi_ixi<0.001)) %ageing and sdi
+label_names_all((FDR_hc_sdi<0.01) & (FDR_hc_rock<0.001) & ~(FDR_sdi_rock<0.001)) %ageing and sdi
 
-label_names_all(~(FDR_hc_sdi<0.01) & (FDR_hc_ixi<0.001) & (FDR_sdi_ixi<0.001)) % uniquely ageing
+label_names_all(~(FDR_hc_sdi<0.01) & (FDR_hc_rock<0.001) & (FDR_sdi_rock<0.001)) % uniquely ageing
 
-label_names_all((FDR_hc_sdi<0.01) & ~(FDR_hc_ixi<0.001) & (FDR_sdi_ixi<0.001)) %uniquely sdi
+label_names_all((FDR_hc_sdi<0.01) & ~(FDR_hc_rock<0.001) & (FDR_sdi_rock<0.001)) %uniquely sdi
 
 
 %% INDIVIDUAL datasets:
