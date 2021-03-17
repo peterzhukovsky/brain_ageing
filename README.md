@@ -16,8 +16,11 @@ https://github.com/SarahMorgan/Morphometric_Similarity_SZ/blob/master/Gene_analy
 
 # Results visualization:
 **network_viz_fs.m**
+
 **network_viz_fs2.m**
+
 **network_viz_fs3_PLS.m**
+
 These scripts visualize the resulting brain maps by creating a freesurfer color file similar to
 https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/AnatomicalROI/FreeSurferColorLUT
 Where the colors are representing the statistic of interest (average MS or case-control t-statistics for MS). Can be adapted to 
