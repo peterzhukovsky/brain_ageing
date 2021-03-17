@@ -23,4 +23,7 @@ https://github.com/SarahMorgan/Morphometric_Similarity_SZ/blob/master/Gene_analy
 
 These scripts visualize the resulting brain maps by creating a freesurfer color file similar to
 https://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/AnatomicalROI/FreeSurferColorLUT
-Where the colors are representing the statistic of interest (average MS or case-control t-statistics for MS). Can be adapted to 
+
+Where the colors are representing the statistic of interest (average MS or case-control t-statistics for MS). Can be adapted to work with any statistics as long as they are in the Glasser parcellation. 
+
+Note that a different order of the HCP 360 labels (Glasser et al 2016) was used: HOA_VOL_SURF_GLASSER_labels.xlsx provides a mapping of these ids; also to Harvard-Oxford atlas regions.
