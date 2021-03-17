@@ -12,18 +12,6 @@ label_names_all=vertcat(llabel_names, rlabel_names) %combine all labels
 mean_MS=mean(MS_nodemean')'; y=mean_MS(group<=2 | (group==4 & age<45 & age>20)) %%% group 1=HC, group2=SDI, group 4=ROCKLAND
 X=horzcat(group(group<=2 | (group==4 & age<45 & age>20)), sex(group<=2| (group==4 & age<45 & age>20)), age(group<=2| (group==4 & age<45 & age>20))); 
 mdl = fitglm(X,y,'linear')
-%%% HC vs SDI
-X=horzcat(group(group==2 | group==4), sex(group==2 | group==4), age(group==2 | group==4)); y=mean(MS(group==2 | group==4,:)');
-mdl = fitglm(X,y,'linear')
-
-X=horzcat(group(group==1 | group==4), sex(group==1 | group==4), age(group==1 | group==4)); y=mean(MS(group==1 | group==4,:)');
-mdl = fitglm(X,y,'linear')
-mean(mean(MS(group==1,:)'))
-mean(mean(MS(group==2,:)'))
-mean(mean(MS(group==4  & age<45 & age>20,:)'))
-std(mean(MS(group==1,:)'))
-std(mean(MS(group==2,:)'))
-std(mean(MS(group==4  & age<45 & age>20,:)'))
 
 
 %% MS holds mean similarity for each person for each ROI
