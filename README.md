@@ -9,10 +9,19 @@ A script that compares groups using independent samples t-tests with FDR and als
 
 # dev_trajectories.m
 A script constructing developmental "trajectories" from cross-sectional NKI-RS data. It uses these quadratic models to create residuals for "hold-out" data for individuals with stimulant use disorder (cases) and healthy controls. These residuals are then used to test for singificant deviation in cases and controls from the "normative" NKI-RS data. While the model provides good fit for controls, cases show significant deviations (PFDR<0.01); for many regions, the direction of the deviation is the same as the direction of the trajectory. Such MS deviations are interpreted as suggesting accelerated ageing of those brain regions. 
+Rockland NKI-RS link: http://fcon_1000.projects.nitrc.org/indi/enhanced/
 
 # network_PAL.m
 Partial least squares analysis linking regional MS to paired associates learning (PAL) and age using *plsregress* and permutation testing following **Morgan et al 2019 (PNAS)**; see also  
 https://github.com/SarahMorgan/Morphometric_Similarity_SZ/blob/master/Gene_analyses.md
+
+# lasso_PAD.m 
+A set of scripts that uses the data from the previous scripts to 
+a) create a lasso regression model that estimates participants' brain age from initially mean morphometric similarity values in the NKI-RS dataset (Rockland Sample). Initially 360 predictors are included, however regularization prunes a lot of them leaving only the predictors that improve MSE (mean squared error) of the regression. 
+b) applies the model to estimate "brain age gaps" between predicted and actual age of in cases and controls (that are not in NKI-RS) and uses independent samples t-tests to check for significance. 
+
+Violin plotting requires the following function:
+https://uk.mathworks.com/matlabcentral/fileexchange/45134-violin-plot
 
 # Results visualization:
 **network_viz_fs.m**
