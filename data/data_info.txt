@@ -1,0 +1,1 @@
+Summary_Sheets2021 contains the morphometric similarity data for each of the 360 regions in the HCP parcellation alongside group labels as well as age and sex. 
