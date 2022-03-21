@@ -113,8 +113,8 @@ X = [ones(length(x),1) x]; b = X\y; yCalc = X*b; hold on; plot(x,yCalc,'k'); yla
 %% 6. Mean ms vs difference ms
     %relies on having a tstat calculated before
 m1=mean(MS(1:148,:))
-scatter(m1,tstat_roi1, 10, 'filled'); xlim([-0.08 0.08]); hold on;
-scatter(m1(FDR<0.01), tstat_roi1(FDR<0.01), 30, [0.9290, 0.6940, 0.1250])
+scatter(m1(FDR<0.01), tstat_roi1(FDR<0.01), 90, [0.9290, 0.6940, 0.1250], 'filled'); hold on;
+scatter(m1,tstat_roi1, 40, 'filled'); xlim([-0.08 0.08]); hold on;
 
 x=m1; y=tstat_roi1;
 X = [ones(length(x),1) x'];  
